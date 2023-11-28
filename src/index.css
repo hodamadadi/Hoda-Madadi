@@ -1,0 +1,284 @@
+/*-----------------------------Google Font------------------------------------*/
+
+  @import url('https://fonts.googleapis.com/css2?family=Bad+Script&family=Edu+TAS+Beginner:wght@500;600;700&family=Handlee&family=Montserrat:wght@300;400;500;600&family=Rubik:wght@400;500;600;700&display=swap');
+
+/*--------------------------------Colors--------------------------------------*/
+:root {
+  /* --text-shadow:0 0 0 20px #fc0976; */
+  --first-color: hsla(328, 100%, 49%, 0.928);
+  --title-color: hsl(270, 5%, 24%);
+  --text-color: hsl(240, 3%, 31%);
+  --body-color: hsl(258, 60%, 98%);
+  --white:#fff;
+  --black:#121212;
+  /*--------------------------------Fonts-----------------------------------------*/
+  /*.5rem = 8px , 1rem = 16px */
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --body-font:'Rubik',sans-serif;
+  --h1-font-size: 3rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 0.9.rem;
+  /*--------------------------------Fonts weight--------------------------------*/
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  /*--------------------------------Box shadow--------------------------------*/
+  --shadow: 0px 5px 3px 0px rgba(250, 2, 143, 0.962);
+  /*--------------------------------border Radius----------------------------*/
+  --border-radius: 18px;
+/*-----------------------------------Base------------------------------------*/
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body,
+  button,
+  input,
+  textarea {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+  }
+}
+body {
+  line-height: 1.7;
+  color: var(--text-color);
+  scroll-behavior: smooth;
+  transition: all 3ms ease;
+}
+h1,
+h2,
+h3, h4 {
+  color: var(--text-color);
+  font-weight: var(--font-semibold);
+  line-height: 1.4;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none; 
+}
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/*--------------------------------css calsses--------------------------------*/
+.container {
+  max-width: 1080px;
+  margin:0 auto;
+  padding: 0 15px;
+}
+.grid {
+  display: grid;
+}
+.section {
+  padding-top: 2rem;
+}
+.section__title{
+  font-size: var(--h1-font-size);
+  margin-left: 0.875rem;
+  font-weight: var(--font-bold);
+  position: relative;
+  margin-bottom: 3.75rem;
+}
+section {
+  scroll-snap-align: center;
+  height: 100vh;
+}
+.section__title::before{
+  content: "";
+  height: 2.25rem;
+  width: 2.25rem;
+  position: absolute;
+  left: -0.875rem;
+  top: -0.875rem;
+}
+/*------------------------------button-------------------------*/
+/* ARROW UP*/
+#back-to-top {
+  height: 1.5rem;
+  display: grid;
+  place-items: left;
+  text-decoration: none;
+  transform: translateY(0%);
+  transition: ease-out 200ms;
+  transition-property: transform, background-color;
+}
+#back-to-top {
+  place-self: end;
+  position: sticky;
+  margin-top: calc(100vh + var(--back-to-top-off));
+  bottom: 2em;
+  right: 2em;
+}
+
+.fa-arrow-up {
+  font-size: 1.5rem;
+  text-decoration: none;
+  text-align: right;
+  margin-right: 2rem;
+  color: var(--first-color);
+  padding: 0;
+}
+#back-to-top::after {
+  content: '';
+  position: relative;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: 200%;
+  transform: translateY(-30%);
+  background-color: rgba(0, 0, 0, 0);
+  display: block;
+}
+#back-to-top:hover {
+	transform: translateY(-22%);
+}
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+.animate-charcter {
+  text-transform: uppercase;
+  background-image: linear-gradient(
+    -325deg,
+    #ef0d82 0%,
+    #181a1a 29%,
+    #eb0b61 67%,
+    #f781c4 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 3s linear infinite;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: var(--font-bold); 
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, rgb(255, 246, 253) 50%, rgb(245, 190, 231) 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+.bg3 {
+  animation-duration:5s;
+}
+.contents {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+.btn-button {
+  margin-top: 1rem;
+}
+button {
+  width: 130px;
+  height: 40px;
+  background: linear-gradient(to left top, #e61b81 50%, #e970a8 50%);
+  border-style: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+  overflow: hidden;
+  transition: all 0.3s;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+.btn-button{
+  border-radius: 0 13px 0 13px;
+}
+button:hover {
+  transition: all 0.5s;
+  transform: rotate(-3deg) scale(1.1);
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.4);
+}
+button:hover span {
+  animation-play-state: paused;
+}
+@keyframes button-push {
+  50% {
+    transform: scale(0.8);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.btn:hover {
+  animation: button-push 0.3s linear 1;
+  background-color: hotpink;
+}
+.home__socials i {
+  margin-top: 2.4rem;
+  
+}
+/*--------------------------------Responsive------------------------------------*/
+@media screen and(max-width:1024px) {
+  :root {
+    --h1-font-size:1.75rem
+    --h2-font-size:1.525rem;
+    --h3-font-size:1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
+  }
+section {
+    padding: 3rem 0;
+  } 
+  section > p {
+    width: 72%;
+    margin-bottom: 3rem;
+  }
+}
+ @media screen and(max-width: 768px){
+  section {
+    padding: 4rem 6rem;
+  }
+ }

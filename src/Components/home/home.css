@@ -1,0 +1,353 @@
+/* ------------PROFILE STYLES------------*/
+.box {
+  width: 40vmin;
+  height: 40vmin;
+  margin-left: 6rem;
+}
+
+.spin-container {
+  width: 90%;
+  height: 90%;
+  animation: spin 12s ease-in-out infinite alternate;
+  position: relative;
+}
+
+.shape {
+  width: 100%;
+  height: 100%;
+  transition: border-radius 0.5s ease-out;
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite both alternate;
+  position: absolute;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.bd {
+  width: 130%;
+  height: 130%;
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  background-image: url(../../assets/photo.jpg);
+  background-size: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: spin 12s ease-in-out infinite alternate-reverse;
+  opacity: 1;
+  z-index: 2;
+}
+
+@keyframes morph {
+  0% {
+    border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+  }
+  100% {
+    border-radius: 40% 60%;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+/*------------------------------HOME TILTLE STYLES-----------------------------*/
+.content h1 {
+  color: var(--white);
+  position: absolute;
+  transform: translate(-50%, -50%);
+  margin: 2rem;
+  display: flex;
+  text-align: center;
+  text-align: justify;
+}
+.content {
+  margin-left: 3rem;
+}
+.content h1:nth-child(1) {
+  color: transparent;
+  -webkit-text-stroke: 2px var(--title-color);
+}
+
+.content h1:nth-child(2) {
+  color: var(--title-color);
+  animation: animate 4s ease-in-out infinite;
+}
+p {
+  text-shadow: 0 0 7px rgba(255, 255, 255, 0.3),
+    0 0 3px rgba(255, 255, 255, 0.3);
+  font-size: var(--normal-font-size);
+  font-family: 'Handlee';
+}
+.container-text {
+  color: var(--black);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: var(--font-bold);
+  margin-top: 0;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*-----------------------------TITLE ANIMATION (front-end) -----------------------*/
+.animation {
+  height: 33px;
+  overflow: hidden;
+  padding: 0.2rem;
+  margin-bottom: 1rem;
+}
+
+.animation > div > div {
+  padding: 0.25rem 0.85rem;
+  height: 2.81rem;
+  margin-bottom: 3rem;
+  display: inline-block;
+}
+
+.animation div:first-child {
+  animation: text-animation 8s infinite;
+}
+.first div {
+  background-color: var(--first-color);
+}
+.second div {
+  background-color: var(--black);
+  color: var(--first-color);
+}
+@keyframes text-animation {
+  0% {
+    margin-top: 0;
+  }
+  10% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: -5.62rem;
+  }
+  30% {
+    margin-top: -5.62rem;
+  }
+  40% {
+    margin-top: -11.24rem;
+  }
+  60% {
+    margin-top: -11.24rem;
+  }
+  70% {
+    margin-top: -5.62rem;
+  }
+  80% {
+    margin-top: -5.62rem;
+  }
+  90% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    clip-path: polygon(
+      0% 45%,
+      16% 44%,
+      33% 50%,
+      54% 60%,
+      70% 61%,
+      84% 59%,
+      100% 52%,
+      100% 100%,
+      0% 100%
+    );
+  }
+
+  50% {
+    clip-path: polygon(
+      0% 60%,
+      15% 65%,
+      34% 66%,
+      51% 62%,
+      67% 50%,
+      84% 45%,
+      100% 46%,
+      100% 100%,
+      0% 100%
+    );
+  }
+}
+/*------------------------------HOME & PROFILE IMAGE STYLES-----------------------------*/
+.home {
+  /* position: relative; */
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro {
+  max-width: 520px;
+  text-align: center;
+  margin-top: 5rem;
+}
+/*------------------------------HOME SOCIALS STYLES-----------------------------*/
+.home__social-link {
+  color: var(--title-color);
+  font-size: 1.1rem;
+  transition: 0.3s;
+}
+
+.home__social-link:hover {
+  color: rgb(246, 5, 138);
+}
+.home__socials {
+  display: flex;
+  column-gap: 0.75rem;
+}
+.talk-bt {
+  margin: 0.6rem 0;
+}
+/*------------------------------HOME SMOOTH SCROLLING STYLES-----------------------------*/
+.wheel {
+  background-color: var(--title-color);
+  border-radius: 100%;
+  width: 0.25rem;
+  height: 0.25rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: ani-mouse 2s linear infinite;
+}
+.scrolldowns {
+  --color: rgb(93, 87, 90);
+  --sizeX: 25px;
+  --sizeY: 40px;
+  position: relative;
+  width: var(--sizeX);
+  height: var(--sizeY);
+  margin-left: 11.5rem;
+  margin-top: 0.5rem;
+  border: calc(var(--sizeX) / 10) solid var(--color);
+  border-radius: 50px;
+  box-sizing: border-box;
+}
+.scrolldowns::before {
+  content: '';
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  background-color: var(--color);
+  border-radius: 100%;
+  animation: scrolldown-anim 2s infinite;
+  box-sizing: border-box;
+  box-shadow: 0px -5px 3px 1px #ffffff66;
+}
+@keyframes scrolldowns-anim {
+  0% {
+    opacity: 0;
+    height: 6px;
+  }
+  40% {
+    opacity: 1;
+    height: 10px;
+  }
+  80% {
+    transform: translate(0, 20px);
+    height: 10px;
+    opacity: 0;
+  }
+  100% {
+    height: 3px;
+    opacity: 0;
+  }
+}
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 50%;
+  }
+  50% {
+    top: 50%;
+  }
+  100% {
+    top: 29%;
+  }
+}
+.chevrons {
+  padding: 6px 0 0 0;
+  margin-left: -3px;
+  margin-top: 48px;
+  width: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chevrondown {
+  margin-top: -6px;
+  position: relative;
+  border: solid var(--color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+}
+.chevrondown:nth-child(odd) {
+  animation: pulse 500ms ease infinite alternate;
+}
+.chevrondown:nth-child(even) {
+  animation: pulse 500ms ease infinite alternate 250ms;
+}
+@keyframes pulse {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes ani-mouse {
+  0% {
+    top: 29%;
+  }
+  15% {
+    top: 30%;
+  }
+  50% {
+    top: 30%;
+  }
+  100% {
+    top: 10%;
+  }
+}
+/*-----------------------RESPONSIVE HOME PAGE-------------------*/
+@media screen and(max-width: 890px) {
+  h1 {
+    line-height: 2rem;
+    margin-top: 0.6rem;
+    font-size: 1rem;
+  }
+}
+/*TABLETS*/
+@media screen and(max-width: 768px) {
+  .intro {
+    align-items: center;
+    margin-top: 2rem;
+  }
+}
+/*PHONES*/
+
+@media screen and(max-width: 480px) {
+  .container-text {
+    grid-template-columns: 1fr;
+  }
+}

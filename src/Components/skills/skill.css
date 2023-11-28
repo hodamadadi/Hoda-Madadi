@@ -1,0 +1,164 @@
+/*-------------------------SKILL BAR STYLES-------------------------*/
+.bg-color {
+  background-color: var(--first-color);
+}
+.section__title {
+  text-align: center;
+  padding-top: 0;
+}
+.education__befor-title {
+  color: (--text-color);
+  font-weight: var(--font-semibold);
+  font-size: var(--normal-font-size);
+  text-align: center;
+  margin-bottom: 0;
+}
+#skill {
+  margin-top: 28rem;
+  padding-top: 4.5rem;
+}
+.col {
+  width: 50%;
+  margin: 0 5%;
+  position: relative;
+  float: left;
+  font-size: 12px;
+  line-height: 2em;
+  padding: 5% 0;
+}
+.col {
+  width: 70%;
+}
+.skill {
+  list-style: none;
+}
+.skill li {
+  margin-bottom: 70px;
+  background: #030303;
+  height: 12px;
+  border-radius: 3px;
+  border-left: 1px solid #111;
+  border-top: 1px solid #111;
+  border-right: 1px solid #333;
+  border-bottom: 1px solid #333;
+}
+.skill li em {
+  position: relative;
+  font-size: 16px;
+  text-align: center;
+  color: var(--black);
+  top: -28px;
+  font-weight: var(--font-bold);
+  font-family: 'Rubik';
+}
+.greenline {
+  height: 6px;
+  margin: 2px 0;
+  background: var(--first-color);
+  position: absolute;
+  box-shadow: 0px 0px 10px 1px rgba(139, 147, 139, 0.4);
+}
+.titulo {
+  opacity: 1;
+  animation: titulo 5s ease-out;
+}
+.html {
+  width: 85%;
+  animation: wordpress 2s ease-out;
+}
+.css {
+  width: 85%;
+  animation: prestashop 2s ease-out;
+}
+.javascript {
+  width: 75%;
+  animation: joomla 2s ease-out;
+}
+.react {
+  width: 80%;
+  animation: blogger 2s ease-out;
+}
+.bootstrap {
+  width: 85%;
+  animation: tridion 2s ease-out;
+}
+@keyframes titulo {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes html {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 90%;
+  }
+}
+@keyframes css {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@keyframes javascript {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@keyframes react {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 70%;
+  }
+}
+@keyframes bootstrap {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+/*media queries*/
+@media (max-width: 1124px) {
+  h2 {
+    font-size: 2em;
+  }
+}
+@media (max-width: 980px) {
+  h2 {
+    font-size: 1.8em;
+  }
+}
+@media (max-width: 767px) {
+  h2 {
+    font-size: 1.4em;
+  }
+}
+@media (max-width: 580px) {
+  h2 {
+    font-size: 1.1em;
+    padding: 10px 0;
+  }
+}
+@media (max-width: 480px) {
+  /* h2 {
+    font-size: 1em;
+    padding: 10px 0 15px 0;
+  } */
+  .col {
+    width: 40%;
+    align-items: center;
+  }
+}

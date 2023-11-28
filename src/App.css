@@ -1,0 +1,16 @@
+html {
+  /* scroll-snap-type: y mandatory; */
+  scroll-behavior: smooth;
+}
+section {
+  scroll-snap-align: center;
+  height: 100vh;
+}
+.main {
+  margin-left: 110px;
+}
+@media screen and(max-width: 1024px) {
+  .main {
+    margin-left: 0;
+  }
+}

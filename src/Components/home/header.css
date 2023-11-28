@@ -1,0 +1,9 @@
+/*---------------------------HOME SOCIALS STYLES-----------------------------*/
+.home__social-link {
+  transition-duration: 1s;
+}
+.home__socials a {
+  padding: 0 1rem;
+  margin: 0.2rem;
+}
+
