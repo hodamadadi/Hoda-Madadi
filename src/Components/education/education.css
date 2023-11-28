@@ -153,6 +153,6 @@ p {
 @media screen and (max-width: 480px) {
   .all-timelines::before {
     top: 32px;
-    padding: 5rem;
+    padding: 8rem;
   }
 }
