@@ -310,7 +310,7 @@ h6 {
   }
   .wrapper {
     width: 100%;
-    margin: 2rem 0; 
+/*     margin: 2rem 0;  */
   }
   .about-me-title {
     text-align: center;
@@ -318,7 +318,7 @@ h6 {
   .js-slider_nav_item {
     height: 3rem;
     width: 3rem;
-    margin: 1rem;
+    margin: 0 1rem;
   }
 }
 
