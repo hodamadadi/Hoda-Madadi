@@ -70,10 +70,10 @@ p {
   padding-left: 0.7rem;
 }
 #education {
-  margin-top: 13rem;
+  margin-top: 8rem;
   align-items: center;
   justify-content: center;
-  margin-bottom: 12rem;
+  margin-bottom: 10rem;
 }
 .timeline-text span {
   display: block;
@@ -153,6 +153,6 @@ p {
 @media screen and (max-width: 480px) {
   .all-timelines::before {
     top: 32px;
-    padding: 3rem;
+    padding: 5rem;
   }
 }
